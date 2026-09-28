@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoleElite — Step Into Excellence</title>
+  <meta name="description"
+    content="SoleElite is your premium destination for luxury sneakers and boots. Shop the latest Nike, Adidas, New Balance, and more with expert curation and unbeatable style." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="header" id="header">
+    <div class="header-inner container">
+      <a href="#" class="logo" id="logo-link">
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" class="animated-shoe">
+            <path d="M22,15.5L19.4,7.8C19,6.6,17.9,5.8,16.7,5.8H14.5L10.2,1.5C9.8,1.1,9.2,0.9,8.6,0.9H4C2.9,0.9,2,1.8,2,2.9v2h-1
+              c-0.6,0-1,0.4-1,1v7c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2v-1.4C22,16.1,22,15.8,22,15.5z M3.5,4.9V13h2v1.9H3.5z M20,13H7V6h1.2
+              c0.4,0,0.9-0.3,1.2-0.7L12.5,2h1.3l2.8,2.8c0.4,0.4,0.9,0.6,1.4,0.6h0.6v0.1l1.6,4.9V16h-2v0.4h2V13z"/>
+          </svg>
+        </span>
+        <span class="logo-text">Sole<strong>Elite</strong></span>
+      </a>
+
+      <nav class="nav" id="main-nav" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active" id="nav-home">Home</a>
+        <a href="#products" class="nav-link" id="nav-sneakers">Sneakers</a>
+        <a href="#boots" class="nav-link" id="nav-boots">Boots</a>
+        <a href="#sale" class="nav-link sale-link" id="nav-sale">Sale</a>
+        <a href="#about" class="nav-link" id="nav-about">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cart-btn" aria-label="Open cart">
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#hero" class="mobile-nav-link" id="mob-home">Home</a>
+      <a href="#products" class="mobile-nav-link" id="mob-sneakers">Sneakers</a>
+      <a href="#boots" class="mobile-nav-link" id="mob-boots">Boots</a>
+      <a href="#sale" class="mobile-nav-link sale-link" id="mob-sale">Sale</a>
+      <a href="#about" class="mobile-nav-link" id="mob-about">About</a>
+    </div>
+  </header>
+
+  <!-- ── HERO (Scroll Canvas Animation) ── -->
+  <section class="hero-scroll-container" id="hero">
+
+    <!-- Sticky viewport that holds everything visible -->
+    <div class="hero-sticky" id="hero-sticky">
+
+      <!-- Canvas: frames rendered here -->
+      <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+
+      <!-- Radial vignette overlay -->
+      <div class="hero-vignette" aria-hidden="true"></div>
+
+      <!-- ── Phase 1: Opening (frames 1-60) ── -->
+      <div class="hero-phase" id="phase-1">
+        <div class="phase-inner">
+          <p class="phase-eyebrow">New Season · 2026 Collection</p>
+          <h1 class="phase-title">Step Into<br /><span class="phase-accent">Excellence</span></h1>
+          <p class="phase-sub">Premium footwear curated for those who demand the extraordinary.</p>
+        </div>
+      </div>
+
+      <!-- ── Phase 2: Fire (frames 60-140) ── -->
+      <div class="hero-phase" id="phase-2">
+        <div class="phase-inner phase-inner--right">
+          <p class="phase-eyebrow"></p>
+          <h2 class="phase-title">Born From<br /><span class="phase-accent">Flame</span></h2>
+          <ul class="phase-features">
+            <li><span class="feat-icon feat-icon--dot"></span>Premium hand-crafted leather</li>
+            <li><span class="feat-icon feat-icon--dot"></span>Exclusive limited colorways</li>
+            <li><span class="feat-icon feat-icon--dot"></span>100% authenticated originals</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ── Phase 3: Swoosh / CTA (frames 140-205) ── -->
+      <div class="hero-phase" id="phase-3">
+        <div class="phase-inner phase-inner--center">
+          <p class="phase-eyebrow">The Icon Awaits</p>
+          <h2 class="phase-title">Just<br /><span class="phase-accent">Do It.</span></h2>
+          <p class="phase-sub">Shop the drop before it's gone.</p>
+          <div class="phase-actions">
+            <a href="#products" class="btn btn-primary" id="hero-cta">Shop Now</a>
+            <a href="#about" class="btn btn-ghost" id="hero-explore">Our Story</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><span class="stat-num">500+</span><span class="stat-label">Styles</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat"><span class="stat-num">50K+</span><span class="stat-label">Customers</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat"><span class="stat-num">5.0</span><span class="stat-label">Rating</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll hint (shown only at the very top) -->
+      <div class="hero-scroll-hint" id="scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="hero-progress-track" aria-hidden="true">
+        <div class="hero-progress-bar" id="hero-progress-bar"></div>
+      </div>
+
+    </div><!-- /hero-sticky -->
+  </section>
+
+  <!-- ── MARQUEE ── -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Nike</span><span>·</span><span>Adidas</span><span>·</span><span>New Balance</span><span>·</span>
+      <span>Jordan</span><span>·</span><span>Yeezy</span><span>·</span><span>Puma</span><span>·</span>
+      <span>Timberland</span><span>·</span><span>Clarks</span><span>·</span><span>Nike</span><span>·</span>
+      <span>Adidas</span><span>·</span><span>New Balance</span><span>·</span><span>Jordan</span><span>·</span>
+      <span>Yeezy</span><span>·</span><span>Puma</span><span>·</span><span>Timberland</span><span>·</span><span>Clarks</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- ── FEATURED PRODUCTS ── -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Handpicked for You</p>
+        <h2 class="section-title" id="featured-title">Featured <span class="accent">Products</span></h2>
+        <p class="section-subtitle">Exclusive drops and top picks — before they sell out.</p>
+      </div>
+
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+        <button class="filter-btn" data-filter="sneaker" id="filter-sneakers">Sneakers</button>
+        <button class="filter-btn" data-filter="boot" id="filter-boots-btn">Boots</button>
+        <button class="filter-btn" data-filter="sale" id="filter-sale-btn">On Sale</button>
+      </div>
+
+      <div class="products-grid" id="products-grid">
+
+        <!-- Card 1: Jordan 1 Lo Cream -->
+        <article class="product-card" data-category="sneaker sale" id="card-jordan">
+          <div class="card-image-wrap">
+            <span class="badge badge-sale">Sale</span>
+            <span class="badge badge-hot">Hot</span>
+            <img src="images/jordan1_cream.png" alt="Nike Air Jordan 1 Lo Cream" class="card-img" loading="lazy" />
+            <div class="card-overlay">
+              <button class="overlay-btn" data-id="jordan1" data-name='Nike Air Jordan 1 Lo "Cream"' data-price="150.50"
+                aria-label="Quick add Jordan 1">Quick Add</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Nike Jordan</p>
+            <h3 class="card-name">Nike Air Jordan 1 Lo<br /><em>"Cream"</em></h3>
+            <div class="card-price">
+              <span class="price-sale">£150.50</span>
+              <span class="price-original">£185.00</span>
+              <span class="price-save">Save 19%</span>
+            </div>
+            <ul class="card-features">
+              <li>Nike Jordan 1 Lo custom sneakers made with premium leather</li>
+              <li>Handmade on a pair of Nike Jordan 1 sneaker base, features a tumble leather custom floating swoosh
+              </li>
+              <li>Comes with extra laces, inspired by the OffWhite AJ1 Sneaker collab</li>
+            </ul>
+            <button class="btn-cart" data-id="jordan1" data-name='Nike Air Jordan 1 Lo "Cream"' data-price="150.50"
+              id="add-jordan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 01-8 0" />
+              </svg>
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 2: Yeezy Onyx -->
+        <article class="product-card" data-category="sneaker sale" id="card-yeezy">
+          <div class="card-image-wrap">
+            <span class="badge badge-sale">Sale</span>
+            <span class="badge badge-new">New</span>
+            <img src="images/yeezy_onyx.png" alt="Adidas Yeezy Boost 350 V2 Onyx" class="card-img" loading="lazy" />
+            <div class="card-overlay">
+              <button class="overlay-btn" data-id="yeezy" data-name='Adidas Yeezy Boost 350 V2 "Onyx"'
+                data-price="209.99" aria-label="Quick add Yeezy">Quick Add</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Adidas Yeezy</p>
+            <h3 class="card-name">Yeezy Boost 350 V2<br /><em>"Onyx"</em></h3>
+            <div class="card-price">
+              <span class="price-sale">£209.99</span>
+              <span class="price-original">£270.00</span>
+              <span class="price-save">Save 22%</span>
+            </div>
+            <ul class="card-features">
+              <li>Full-length Adidas BOOST midsole for all-day comfort and energy return</li>
+              <li>Primeknit upper with monofilament side stripe in all-black "Onyx" colourway</li>
+              <li>DS (Deadstock) — unworn, original box included, authenticated by SoleElite</li>
+            </ul>
+            <button class="btn-cart" data-id="yeezy" data-name='Adidas Yeezy Boost 350 V2 "Onyx"' data-price="209.99"
+              id="add-yeezy">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 01-8 0" />
+              </svg>
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 3: Chelsea Boots -->
+        <article class="product-card" data-category="boot" id="card-chelsea">
+          <div class="card-image-wrap">
+            <span class="badge badge-new">New</span>
+            <img src="images/chelsea_boots.png" alt="Luxury Chelsea Boots Black Leather" class="card-img"
+              loading="lazy" />
+            <div class="card-overlay">
+              <button class="overlay-btn" data-id="chelsea" data-name="Luxe Chelsea Boot — Obsidian" data-price="179.00"
+                aria-label="Quick add Chelsea Boot">Quick Add</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">SoleElite Originals</p>
+            <h3 class="card-name">Luxe Chelsea Boot<br /><em>Obsidian</em></h3>
+            <div class="card-price">
+              <span class="price-sale">£179.00</span>
+            </div>
+            <ul class="card-features">
+              <li>Full-grain Italian calfskin leather upper, hand-polished to a mirror finish</li>
+              <li>Goodyear-welted construction for superior durability and resoleable comfort</li>
+              <li>Elastic side panels with genuine leather pull tabs — slip-on ease, tailored look</li>
+            </ul>
+            <button class="btn-cart" data-id="chelsea" data-name="Luxe Chelsea Boot — Obsidian" data-price="179.00"
+              id="add-chelsea">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 01-8 0" />
+              </svg>
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 4: New Balance 550 -->
+        <article class="product-card" data-category="sneaker sale" id="card-nb550">
+          <div class="card-image-wrap">
+            <span class="badge badge-sale">Sale</span>
+            <img src="images/nb550_white.png" alt="New Balance 550 White Green" class="card-img" loading="lazy" />
+            <div class="card-overlay">
+              <button class="overlay-btn" data-id="nb550" data-name='New Balance 550 "Varsity Green"' data-price="94.99"
+                aria-label="Quick add NB 550">Quick Add</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">New Balance</p>
+            <h3 class="card-name">New Balance 550<br /><em>"Varsity Green"</em></h3>
+            <div class="card-price">
+              <span class="price-sale">£94.99</span>
+              <span class="price-original">£120.00</span>
+              <span class="price-save">Save 21%</span>
+            </div>
+            <ul class="card-features">
+              <li>Retro-inspired basketball silhouette with premium leather and suede upper</li>
+              <li>Encap® midsole technology for lasting cushioning and lateral stability</li>
+              <li>Classic "Varsity Green" colourway — limited restock, grab yours before it's gone</li>
+            </ul>
+            <button class="btn-cart" data-id="nb550" data-name='New Balance 550 "Varsity Green"' data-price="94.99"
+              id="add-nb550">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 01-8 0" />
+              </svg>
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 5: Nike Dunk Low Panda -->
+        <article class="product-card" data-category="sneaker" id="card-dunk-panda">
+          <div class="card-image-wrap">
+            <span class="badge badge-hot">Hot</span>
+            <img src="images/nike_dunk_panda.png" alt="Nike Dunk Low Panda Black White" class="card-img" loading="lazy" />
+            <div class="card-overlay">
+              <button class="overlay-btn" data-id="dunk-panda" data-name='Nike Dunk Low "Panda"' data-price="135.00"
+                aria-label="Quick add Nike Dunk Panda">Quick Add</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Nike</p>
+            <h3 class="card-name">Nike Dunk Low<br /><em>"Panda"</em></h3>
+            <div class="card-price">
+              <span class="price-sale">£135.00</span>
+            </div>
+            <ul class="card-features">
+              <li>Iconic two-tone black and white "Panda" colourway for versatile styling</li>
+              <li>Premium leather upper with perforations for classic Dunk look and breathability</li>
+              <li>Plush foam midsole offering lightweight responsive cushioning</li>
+            </ul>
+            <button class="btn-cart" data-id="dunk-panda" data-name='Nike Dunk Low "Panda"' data-price="135.00"
+              id="add-dunk-panda">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 01-8 0" />
+              </svg>
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 6: Timberland Premium Boot -->
+        <article class="product-card" data-category="boot" id="card-timberland">
+          <div class="card-image-wrap">
+            <span class="badge badge-new">New</span>
+            <img src="images/timberland_boot.png" alt="Timberland 6-Inch Premium Boot Wheat" class="card-img" loading="lazy" />
+            <div class="card-overlay">
+              <button class="overlay-btn" data-id="timberland" data-name='Timberland 6-Inch Premium Boot' data-price="190.00"
+                aria-label="Quick add Timberland Boot">Quick Add</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Timberland</p>
+            <h3 class="card-name">6-Inch Premium Boot<br /><em>"Wheat"</em></h3>
+            <div class="card-price">
+              <span class="price-sale">£190.00</span>
+            </div>
+            <ul class="card-features">
+              <li>Premium waterproof nubuck leather upper for rugged durability</li>
+              <li>Seam-sealed waterproof construction keeps feet dry in any weather</li>
+              <li>Anti-fatigue technology built into the midsole for all-day comfort</li>
+            </ul>
+            <button class="btn-cart" data-id="timberland" data-name='Timberland 6-Inch Premium Boot' data-price="190.00"
+              id="add-timberland">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 01-8 0" />
+              </svg>
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROMO BANNER ── -->
+  <section class="promo-banner" id="sale">
+    <div class="container promo-inner">
+      <div class="promo-text">
+        <p class="promo-eyebrow">Limited Time</p>
+        <h2 class="promo-title">Season Sale — Up to <span class="accent">40% Off</span></h2>
+        <p class="promo-sub">Use code <strong class="promo-code">SOLE40</strong> at checkout for an extra 10%</p>
+      </div>
+      <a href="#products" class="btn btn-primary" id="promo-cta">Shop the Sale</a>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="about-section" id="about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <p class="section-eyebrow">Who We Are</p>
+        <h2 class="section-title">Born from a <span class="accent">Passion</span> for Footwear</h2>
+        <p class="about-body">SoleElite was founded by sneakerheads, for sneakerheads. We curate the rarest drops, the
+          cleanest silhouettes, and the most coveted collaborations — all in one place.</p>
+        <p class="about-body">Every pair we stock is authenticated, carefully inspected, and stored in
+          climate-controlled conditions. When you buy from us, you buy with confidence.</p>
+        <div class="about-pillars">
+          <div class="pillar">
+            <span class="pillar-icon pillar-icon--lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></span>
+            <div><strong>100% Authentic</strong>
+              <p>Every item authenticated by our expert team</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon pillar-icon--bolt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <div><strong>Express Delivery</strong>
+              <p>Next-day delivery available UK-wide</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon pillar-icon--return"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 14 4 9 9 4"/><path d="M20 20v-7a4 4 0 00-4-4H4"/></svg></span>
+            <div><strong>Easy Returns</strong>
+              <p>30-day hassle-free returns</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-img-frame">
+          <img src="images/chelsea_boots.png" alt="Premium SoleElite Chelsea Boot" class="about-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" id="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo" id="footer-logo">
+          <span class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" class="animated-shoe">
+              <path d="M22,15.5L19.4,7.8C19,6.6,17.9,5.8,16.7,5.8H14.5L10.2,1.5C9.8,1.1,9.2,0.9,8.6,0.9H4C2.9,0.9,2,1.8,2,2.9v2h-1
+                c-0.6,0-1,0.4-1,1v7c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2v-1.4C22,16.1,22,15.8,22,15.5z M3.5,4.9V13h2v1.9H3.5z M20,13H7V6h1.2
+                c0.4,0,0.9-0.3,1.2-0.7L12.5,2h1.3l2.8,2.8c0.4,0.4,0.9,0.6,1.4,0.6h0.6v0.1l1.6,4.9V16h-2v0.4h2V13z"/>
+            </svg>
+          </span>
+          <span class="logo-text">Sole<strong>Elite</strong></span>
+        </a>
+        <p class="footer-tagline">Step Into Excellence.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon" id="social-instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a href="#" class="social-icon" id="social-twitter" aria-label="Twitter / X">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+          <a href="#" class="social-icon" id="social-tiktok" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.5a8.16 8.16 0 004.77 1.52V7.55a4.85 4.85 0 01-1-.86z" />
+            </svg>
+          </a>
+          <a href="#" class="social-icon" id="social-youtube" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4 class="footer-col-title">Shop</h4>
+        <ul>
+          <li><a href="#products" class="footer-link">Sneakers</a></li>
+          <li><a href="#boots" class="footer-link">Boots</a></li>
+          <li><a href="#sale" class="footer-link">Sale</a></li>
+          <li><a href="#" class="footer-link">New Arrivals</a></li>
+          <li><a href="#" class="footer-link">Brands</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4 class="footer-col-title">Help</h4>
+        <ul>
+          <li><a href="#" class="footer-link">Sizing Guide</a></li>
+          <li><a href="#" class="footer-link">Authenticity</a></li>
+          <li><a href="#" class="footer-link">Shipping Info</a></li>
+          <li><a href="#" class="footer-link">Returns</a></li>
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4 class="footer-col-title">Company</h4>
+        <ul>
+          <li><a href="#about" class="footer-link">About Us</a></li>
+          <li><a href="#" class="footer-link">Careers</a></li>
+          <li><a href="#" class="footer-link">Press</a></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2025 SoleElite. All rights reserved.</p>
+        <p>Made for sneaker culture.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── CART SIDEBAR ── -->
+  <aside class="cart-sidebar" id="cart-sidebar" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" id="cart-close" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 01-8 0" />
+        </svg>
+        <p>Your cart is empty</p>
+        <span>Discover our premium collection</span>
+      </div>
+    </div>
+    <div class="cart-footer" id="cart-footer">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span class="cart-total-amount" id="cart-total">£0.00</span>
+      </div>
+      <button class="btn btn-primary btn-full" id="checkout-btn">Checkout</button>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- ── TOAST ── -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
